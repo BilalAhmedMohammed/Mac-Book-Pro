@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Book Web Site</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/60e5baead1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+        <div class="container-fluid d-flex flex-column justify-items-center">
+            <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul id="navLinks" class="navbar-nav me-auto mb-2 mb-lg-0 text-danger">
+                    <li class="nav-item pe-4">
+                        <a class="nav-link text-secondary " aria-current="page" href="./appelLogo.html"><i
+                                class="bi bi-apple"></i></a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link text-secondary" href="#">Store</a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Mac</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">IPad</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Iphone</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Watch</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">AirPods</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">TV&Home</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Only on Apple</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Accessories</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Support</a>
+                    </li>
+                    <li id="searchButton" onclick="displaySearchInput()" class="nav-item pe-3">
+                        <a class="nav-link text-secondary" aria-current="page" href="#"><i class="bi bi-search"></i></a>
+                    </li>
+                    <li class="nav-item dropdown pe-3">
+                        <a class="nav-link ps-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-bag text-secondary"></i>
+                        </a>
+                        <ul class="dropdown-menu rounded-3 p-4 " aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item p-4 text-secondary" href="#">Your Bag is Empty</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i class="bi bi-bag pe-3"></i>Bag</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-bookmark-check pe-3"></i>Saved Items</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-box-seam pe-3"></i>Orders</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-dash-circle-dotted pe-3"></i>Account</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i class="bi bi-person-circle pe-3"></i>Sign
+                                    in</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            <!-- Modal -->
+            <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-apple"></i> Card</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="h1 fw-bold text-center">Get a new Apple Card and save even more on Apple
+                                products.‡</p>
+                            <p class="text-secondary">Only at Apple. Shop in stores, online, or on the Apple Store
+                                appand get Daily Cash back.</p>
+                            <p class="h4">Get 5% Daily Cash back when you pay in full.</p>
+                            <p class="text-secondary">Save even more on iPhone, iPad, Apple Watch, Mac, and more. Apply
+                                today and save on purchases of Apple products through January 31. Purchases made with
+                                Apple Card Monthly Installments are excluded. Additional exclusions and terms apply.‡
+                            </p>
+                            <p class="h4">Or get 3% Daily Cash back when you pay over time.</p>
+                            <p class="text-secondary">Get 3% Daily Cash back when you use Apple Card and select a
+                                payment plan like Apple Card Monthly Installments during checkout.</p>
+                            <p class="text-secondary">‡ The following purchases with Apple Card are ineligible to earn
+                                5% back: monthly financing through Apple Card Monthly Installments, Apple iPhone
+                                Payments, the iPhone Upgrade Program, and wireless carrier financing plans; Apple Media
+                                Services; AppleCare+ monthly payments. Subject to credit approval. Valid only on
+                                qualifying purchases in U.S. for new Apple Card customers who open an account and use it
+                                from 12/26/21 to 1/31/22 at Apple Store locations, apple.com, the Apple Store App, or by
+                                calling 1-800-MY-APPLE. Accounts opened before 12/26/21 or after 1/31/22 do not qualify.
+                                New Apple Card users added to an Apple Card Family account opened during offer period
+                                can earn 5% back on their own purchases. Not valid for existing Apple Card users who
+                                merge their Apple Card accounts to become Co-Owners. 5% is total amount of Daily Cash
+                                that can be earned for qualifying Apple purchases using Apple Card. Returning qualified
+                                items that were purchased during offer period may impact your cash back. 5% savings is
+                                earned as Daily Cash and transferred to your Apple Cash card when transactions post to
+                                your Apple Card account. If you do not have an Apple Cash card, Daily Cash can be
+                                applied by you as a credit on your statement balance. See the Apple Card Customer
+                                Agreement for more details on Daily Cash and qualifying transactions. Changes to your
+                                account status during offer period may delay the fulfillment of your Daily Cash bonus.
+
+                                To access and use all the features of Apple Card, you must add Apple Card to Wallet on
+                                an iPhone or iPad with the latest version of iOS or iPadOS. Update to the latest version
+                                by going to Settings > General > Software Update. Tap Download and Install.
+
+                                Available for qualifying applicants in the United States.
+
+                                Apple Card is issued by Goldman Sachs Bank USA, Salt Lake City Branch.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+                <form id="FormSearch" class="d-none pe-3">
+                    <input onchange="test(this)" id="inputSearch" class="form-control me-2 bg-dark text-white "
+                        type="search" list="datalist" onkeyup="autoComplete(this.value)" placeholder="Search"
+                        aria-label="Search">
+                    <button id="closeBtnSearch" type="button" class="btn-close bg-secondary" onclick="resetNavLinks()"
+                        aria-label="Close"></button>
+                    <datalist id="datalist">
+                        <option value="Iphon 11 pro"></option>
+                        <option value="Iphon 12 pro max"></option>
+                        <option value="Iphon x max pro"></option>
+                        <option value="Iphon 13 pro"></option>
+                        <option value="Ipad 5"></option>
+                        <option value="Ipad 6"></option>
+                        <option value="Ipad 7"></option>
+                        <option value="Ipad 8"></option>
+                        <option value="Mac pro"></option>
+                        <option value="Mac 2"></option>
+                        <option value="Mac 3"></option>
+                        <option value="Mac 6"></option>
+                        <option value="Watch 4"></option>
+                        <option value="Watch 2"></option>
+                        <option value="Watch 8"></option>
+                        <option value="Inch 13"></option>
+                        <option value="Inch 14"></option>
+                        <option value="Inch 16"></option>
+                    </datalist>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="d-flex justify-content-center bg-light p-4 pb-0">
+                <i class="bi bi-laptop col-3 col-xl-1 col-lg-2  fs-1 text-center"></i>
+                <i class="bi bi-headphones col-xl-1 col-lg-2 col-3 fs-1 text-center"></i>
+                <i class="fab fa-cc-apple-pay col-xl-1 col-lg-2 col-3 fa-3x text-center"></i>
+                <i class="fal fa-tablet-alt  col-xl-1 col-lg-2 col-3 fa-3x text-center"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="d-flex justify-content-center bg-light p-5 pt-0">
+                <small class="col-xl-1 col-lg-2 col-3 text-start fs-6 text-center">MacBook Pro</small>
+                <small class="col-xl-1 col-lg-2 col-3 text-start fs-6 text-center">Accessories</small>
+                <small class="col-xl-1 col-lg-2 col-3 text-start fs-6 text-center">Laptop 10</small>
+                <small class="col-xl-1 col-lg-2 col-3 text-start fs-6 text-center">Tablet</small>
+            </div>
+        </div>
+        <div id="divTextMac" class="row bg-white">
+            <p id="textMackBook" class="fw-bold text-center">MacBookPro</p>
+        </div>
+        <div class="row cardImg justify-content-between">
+            <div id="cardLeft" class="col-12 col-lg-5">
+                <div class="card">
+                    <img class="card-img-top" src="./images/2.jpg" alt="Card image">
+                    <div class="card-body d-flex flex-column">
+                        <small class="text-secondary text-center pb-3 pt-5">13 model</small>
+                        <h2 class="card-title fw-bold pb-3 text-center">Power to go</h2>
+                        <h3 class="text-center pb-3">From $ 1299</h3>
+                        <div class="d-flex flex-row justify-content-around">
+                            <a href="./macBook 13-Inch.html" class="btn btn-primary rounded-3">Buy</a>
+                            <a href="#" class="card-link fs-2 text-decoration-none">Learn More<i
+                                    class="bi bi-arrow-right-square text-primary ps-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-7">
+                <div class="card">
+                    <img class="card-img-top" src="./images/3.jpg" alt="Card image">
+                    <div class="card-body d-flex flex-column">
+                        <small class="text-danger text-center">New</small>
+                        <small class="text-secondary text-center">15 model</small>
+                        <h1 class="card-title fw-bold text-center">Supercharged for pros.</h1>
+                        <h3 class="text-center ">From $ 1999</h3>
+                        <div class="d-flex flex-row justify-content-around">
+                            <a href="./macBook 14-Inch.html" class="btn btn-primary rounded-3">Buy</a>
+                            <a href="#" class="card-link fs-2 text-decoration-none ">Learn More<i
+                                    class="bi bi-arrow-right-square text-primary ps-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row groupCard">
+            <h1 id="rightMac" class="text-center col-12">Which Mac is right for you ?</h1>
+            <div class="card-group d-flex flex-row col-12">
+                <div class="card col-6 col-sm-4 border-bottom-1 border-top-0 border-end-0 border-start-0 pe-3">
+                    <img src="./images/8.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h3 class="card-title fw-bold pb-2 pt-4">MacBook pro 13</h3>
+                        <h4 class=" ">From $ 1299</h4>
+                        <a href="./macBook 13-Inch.html" class="btn btn-primary rounded-3">Buy</a>
+                        <a href="#" class="card-link text-decoration-none pt-2">Learn More<i
+                                class="bi bi-arrow-right-square text-primary ps-4"></i></a>
+                    </div>
+                </div>
+                <div class="card col-6 col-sm-4 border-bottom-1 border-top-0 border-end-0 border-start-0 pe-3">
+                    <img src="./images/8.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <small class="text-danger ">New</small>
+                        <h3 class="card-title fw-bold pb-2 ">MacBook Pro 14</h3>
+                        <h4 class=" ">From $ 1299</h4>
+                        <a href="./macBook 14-Inch.html" class="btn btn-primary rounded-3">Buy</a>
+                        <a href="#" class="card-link text-decoration-none pt-2">Learn More<i
+                                class="bi bi-arrow-right-square text-primary ps-4"></i></a>
+                    </div>
+                </div>
+                <div class="card col-4 d-none d-lg-flex border-bottom-1 border-top-0 border-end-0 border-start-0 pe-3">
+                    <img src="./images/8.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <small class="text-danger ">New</small>
+                        <h3 class="card-title fw-bold pb-2 ">MacBook Pro 16</h3>
+                        <h4 class=" ">From $ 1299</h4>
+                        <a href="./macBook 16-Inch.html" class="btn btn-primary rounded-3">Buy</a>
+                        <a href="#" class="card-link text-decoration-none pt-2">Learn More<i
+                                class="bi bi-arrow-right-square text-primary ps-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row bg-light differenceComponents">
+            <div class="d-flex flex-column align-items-center col-6 col-lg-4">
+                <i class="fab fa-cc-apple-pay fa-3x"></i>
+                <small>appel pay</small>
+                <p class="h5 pt-5">8-Core</p>
+                <small>CPU</small>
+                <p class="h5 pt-5">8-Core</p>
+                <small>GPU</small>
+                <i class="bi bi-battery-full fs-2 pt-5"></i>
+                <small>Up to 20 hours</small>
+                <i class="bi bi-camera-reels fs-2 pt-5"></i>
+                <small>720 face time</small>
+                <i class="fas fa-fingerprint fs-2 pt-5"></i>
+                <small>Touch bar - touch id</small>
+            </div>
+            <div class="d-flex flex-column align-items-center col-6 col-lg-4">
+                <i class="fab fa-cc-apple-pay fa-3x"></i>
+                <small>appel pay</small>
+                <p class="h5 pt-5">8-Core</p>
+                <small>CPU</small>
+                <p class="h5 pt-5">8-Core</p>
+                <small>GPU</small>
+                <i class="bi bi-battery-full fs-2 pt-5"></i>
+                <small>Up to 20 hours</small>
+                <i class="bi bi-camera-reels fs-2 pt-5"></i>
+                <small>720 face time</small>
+                <i class="fas fa-fingerprint fs-2 pt-5"></i>
+                <small>Touch bar - touch id</small>
+
+            </div>
+            <div class="d-flex flex-column align-items-center col-4 d-sm-none d-lg-flex">
+                <i class="fab fa-cc-apple-pay fa-3x"></i>
+                <small>appel pay</small>
+                <p class="h5 pt-5">8-Core</p>
+                <small>CPU</small>
+                <p class="h5 pt-5">8-Core</p>
+                <small>GPU</small>
+                <i class="bi bi-battery-full fs-2 pt-5"></i>
+                <small>Up to 20 hours</small>
+                <i class="bi bi-camera-reels fs-2 pt-5"></i>
+                <small>720 face time</small>
+                <i class="fas fa-fingerprint fs-2 pt-5"></i>
+                <small>Touch bar - touch id</small>
+            </div>
+        </div>
+        <div class="row bg-light">
+            <div class="d-flex flex-row justify-content-center">
+                <a href="#" class="fs-4 text-decoration-none">Compare all Mac models<i
+                        class="bi bi-arrow-right-square text-primary px-4"></i></a>
+                <a href="#" class="fs-4 text-decoration-none">Shop Mac<i
+                        class="bi bi-arrow-right-square text-primary ps-4"></i></a>
+            </div>
+        </div>
+        <div class="row p-5">
+            <div class="col-6 border-0 card text-white d-flex text-center">
+                <img src="./images/13.jpg" style="height: auto;" class="card-img col-12" alt="...">
+                <div class="card-img-overlay">
+                    <h2 class="card-title fw-bold">Appel at Work</h2>
+                    <p class="card-text">Get the power to take your business to the next level. </p>
+                    <p class="card-text"><a href="#" class="text-decoration-none text-white">Learn about Appel at Work<i
+                                class="bi bi-arrow-right-square text-white ps-2"></i></a></p>
+                </div>
+            </div>
+            <div class="col-6 card text-white d-flex text-center border-0">
+                <img src="./images/12.jpg" style="height: auto;" class="card-img col-12" alt="...">
+                <div class="card-img-overlay">
+                    <h2 class="card-title fw-bold">Appel and Education</h2>
+                    <p class="card-text">Empowering educators and Students to move the world forward. </p>
+                    <p class="card-text"><a href="#" class="text-decoration-none text-white">Learn about Appel and
+                            Education<i class="bi bi-arrow-right-square text-white ps-2"></i></a></p>
+                </div>
+            </div>
+        </div>
+        <div class="row delivery bg-light">
+            <div class="d-flex flex-column col-6 align-items-center">
+                <i class="bi bi-box-seam text-secondary fs-1 pb-3"></i>
+                <p class="h4">Free delivery</p>
+                <p class="fs-4 px-5 text-center">And free returns. See checkout for delivery dates.</p>
+                <a href="#" class="fs-4 text-decoration-none">Learn More<i
+                        class="bi bi-arrow-right-square text-primary ps-4"></i></a>
+            </div>
+            <div class="d-flex flex-column col-6 align-items-center">
+                <i class="bi bi-coin text-secondary fs-1 pb-3"></i>
+                <p class="h4">Find the card for you</p>
+                <p class="fs-4 px-5 text-center">Get 3% Daily Cach with Apple Card or get special financing.</p>
+                <a href="#" class="fs-4 text-decoration-none">Learn More<i
+                        class="bi bi-arrow-right-square text-primary ps-4"></i></a>
+            </div>
+        </div>
+        <!-- <nav aria-label="Page navigation ">
+            <ul class="pagination justify-content-center">
+              <li onclick="prev()"  class="page-item disabled">
+                <a id="prev"  class="page-link" href="" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="./appelLogo.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="./macBook 13-Inch.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="./Iphone 11.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="./macBook 14-Inch.html">4</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav> -->
+        <div id="footer" class="row bg-dark">
+            <div class="d-flex justify-content-center px-5  py-2">
+                <small class="text-secondary col-3">Copyright <i class="far fa-copyright text-secondary"></i> 2022 Appel
+                    Inc. All rights reversed.</small>
+                <a class="text-secondary text-decoration-none col-1" href="#">Privacy</a>
+                <small class="col-1 text-secondary">|</small>
+                <a class="text-secondary text-decoration-none col-1" href="#">Copy right</a>
+                <small class="col-1 text-secondary">|</small>
+                <a class="text-secondary text-decoration-none col-1" href="#">Terms of Use</a>
+                <small class="col-1 text-secondary">|</small>
+                <a class="text-secondary text-decoration-none col-1" href="#">Site Map</a>
+                <small class="col-1 text-secondary">|</small>
+                <a class="text-secondary text-decoration-none col-1" href="#">Legal</a>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/js.js"></script>
+</body>
+
+</html>

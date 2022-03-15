@@ -1,0 +1,55 @@
+$primaryColor: #0d6efd;
+@function fromPXtoVM($width) {
+    @return ($width/16) + vw;
+}
+@function fromPXtoVH($height) {
+    @return ($height/7.57) + vh;
+}
+nav {
+    div {
+        #navbarSupportedContent {
+            ul {
+                li {
+                    a {
+                        &:hover {
+                            color: white !important;
+                        }
+                    }
+                }
+                ul {
+                    li {
+                        a {
+                            &:hover {
+                                background-color: black;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#inputSearch {
+    width: fromPXtoVM(700) !important;
+}
+
+.reviewText {
+    padding: fromPXtoVH(20) fromPXtoVM(350) 0vw fromPXtoVM(350);
+}
+#remove{
+    &:hover{
+        text-decoration: underline !important;
+    }
+}
+#reviewThings {
+    img {
+        height: fromPXtoVH(160);
+    }
+}
+#footer {
+    small,
+    a {
+        font-size: fromPXtoVM(16);
+    }
+}

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Book Inch 14</title>
+    <link rel="stylesheet" href="styles/buy.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/60e5baead1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+        <div class="container-fluid d-flex flex-column justify-items-center">
+            <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul id="navLinks" class="navbar-nav me-auto mb-2 mb-lg-0 text-danger">
+                    <li class="nav-item pe-4">
+                        <a class="nav-link text-secondary " aria-current="page" href="./appelLogo.html"><i class="bi bi-apple"></i></a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link text-secondary" href="#">Store</a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Mac</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">IPad</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Iphone</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Watch</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">AirPods</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">TV&Home</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Only on Apple</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Accessories</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Support</a>
+                    </li>
+                    <li id="searchButton" onclick="displaySearchInput()" class="nav-item pe-3">
+                        <a class="nav-link text-secondary" aria-current="page" href="#"><i class="bi bi-search"></i></a>
+                    </li>
+                    <li class="nav-item dropdown pe-3">
+                        <a class="nav-link ps-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-bag text-secondary"></i>
+                        </a>
+                        <ul class="dropdown-menu rounded-3 p-4 " aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item p-4 text-secondary" href="#">Your Bag is Empty</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i class="bi bi-bag pe-3"></i>Bag</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-bookmark-check pe-3"></i>Saved Items</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-box-seam pe-3"></i>Orders</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-dash-circle-dotted pe-3"></i>Account</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-person-circle pe-3"></i>Sign in</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form id="FormSearch" class="d-none pe-3">
+                    <input onchange="test(this)" id="inputSearch" class="form-control me-2 bg-dark text-white "
+                        type="search" list="datalist" onkeyup="autoComplete(this.value)" placeholder="Search"
+                        aria-label="Search">
+                    <button id="closeBtnSearch" type="button" class="btn-close bg-secondary" onclick="resetNavLinks()"
+                        aria-label="Close"></button>
+                    <datalist  id="datalist">
+                        <option value="Iphon 11 pro"></option>
+                        <option value="Iphon 12 pro max"></option>
+                        <option value="Iphon x max pro"></option>
+                        <option value="Iphon 13 pro"></option>
+                        <option value="Ipad 5"></option>
+                        <option value="Ipad 6"></option>
+                        <option value="Ipad 7"></option>
+                        <option value="Ipad 8"></option>
+                        <option value="Mac pro"></option>
+                        <option value="Mac 2"></option>
+                        <option value="Mac 3"></option>
+                        <option value="Mac 6"></option>
+                        <option value="Watch 4"></option>
+                        <option value="Watch 2"></option>
+                        <option value="Watch 8"></option>
+                        <option value="Inch 13"></option>
+                        <option value="Inch 14"></option>
+                        <option value="Inch 16"></option>
+                    </datalist>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row flex-row justifycontent-between Mac-Book-Pro py-2">
+            <div class="col-5 col-lg-4">
+                <p class="h4">MacBook Pro</p>
+            </div>
+            <div class="col-7 col-lg-8 d-flex flex-row justify-content-end">
+                <a class="text-decoration-none text-secondary pe-4 fs-6" href="#">Overview</a>
+                <a class="text-decoration-none text-secondary pe-4 fs-6" href="#">macOS</a>
+                <a class="text-decoration-none text-secondary pe-3 fs-6" href="#">Compare</a>
+
+            </div>
+        </div>
+        <div class="row bg-light Mac-Book-Pro py-3 text-center border border-top-1 border-bottom-0">
+            <small>Pay for your new Mac over 12 months at 0% APR with Apple Card.◊ Just choose Apple Card Monthly
+                Installments when you check out to apply.<a class="text-decoration-none" href="">learn more ></a></small>
+            
+        </div>
+        <div class="row textChoose">
+            <p class="fw-bold col-12">Choose your new MacBook Pro .</p>
+        </div>
+        <div class="row btnInches sticky-top bg-light" style="opacity: .9;">
+            <div id="btnActive" class="btn-group me-2 btn-group-lg" role="group" aria-label="First group">
+                <button type="button" onclick="active(this)" class="btn btn-outline-primary" >13-inch</button>
+                <button type="button" onclick="active(this)" class="btn btn-outline-primary p-4 active"><small
+                        class="text-danger">New</small><br>14-inch</button>
+                <button type="button" onclick="active(this)" class="btn btn-outline-primary p-4"><small
+                        class="text-danger">New</small><br>16-inch</button>
+            </div>
+        </div>
+        <div class="row d-flex flex-column align-items-center  p-3">
+            <i class="far fa-comments fs-1 text-center"></i>
+            <!-- col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-4 -->
+            <p class="h3 text-center">Have questions about buying a Mac?</p>
+            <!-- col-lg-4 col-xl-3 col-xx-2 -->
+            <a class="text-decoration-none fs-4  text-center" href="">Chat with a Specialist</a>
+        </div>
+        <div id="inch13" class="row groupCard d-none">
+            <div class="card-group d-flex flex-row col-12">
+                <div class="card col-6 border-bottom-1 border-top-0 border-end-0 border-start-0 pe-3">
+                    <img src="./images/2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <small class="text-secondary pb-2 ">space gray</small>
+                        <p class="card-title pb-2 h4 ">Apple M1 Chip with 8‑Core CPU and 8‑Core GPU
+                            512GB SSD Storage¹</p>
+                        <small class="text-seconday">Apple M1 chip with 8-core CPU, 8-core GPU, and 16-core Neural
+                            Engine
+                            8GB unified memory
+                            256GB SSD storage
+                            13-inch Retina display with True Tone
+                            Magic Keyboard
+                            Touch Bar and Touch ID
+                            Force Touch trackpad
+                            Two Thunderbolt / USB 4 ports</small>
+                        <h4>$1,299.00</h4>
+                        <small class="text-secondary">or</small>
+                        <p class="h5 fw-bold pb-3">$108.25/mo.per month for 12 mo.monthsFootnote*</p>
+                        <p class="h5">Apple Trade In</p>
+                        <small class="text-secondary pb-5">Get credit toward a new Mac when you trade in your eligible
+                            computer. Or recycle it for free.Footnote◊◊</small>
+                        <a href="./selectMac 13.html" class="btn btn-primary rounded-3 col-12 ">Select</a>
+                    </div>
+                </div>
+                <div class="card col-6 border-bottom-1 border-top-0 border-end-0 border-start-0 pe-3">
+                    <img src="./images/2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <small class="text-secondary pb-2">space gray</small>
+                        <p class="card-title pb-2 h4">Apple M1 Chip with 8‑Core CPU and 8‑Core GPU
+                            256GB SSD Storage¹</p>
+                        <small class="text-seconday">Apple M1 chip with 8-core CPU, 8-core GPU, and 16-core Neural
+                            Engine
+                            8GB unified memory
+                            512GB SSD storage
+                            13-inch Retina display with True Tone
+                            Magic Keyboard
+                            Touch Bar and Touch ID
+                            Force Touch trackpad
+                            Two Thunderbolt / USB 4 ports</small>
+                        <h4>$1,499.00</h4>
+                        <small class="text-secondary">or</small>
+                        <p class="h5 fw-bold pb-3">$124.91/mo.per month for 12 mo.monthsFootnote*</p>
+                        <p class="h5">Apple Trade In</p>
+                        <small class="text-secondary pb-5">Get credit toward a new Mac when you trade in your eligible
+                            computer. Or recycle it for free.Footnote◊◊</small>
+                        <a href="./selectMac 13.html" class="btn btn-primary rounded-3 col-12 ">Select</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="inch14" class="row groupCard">
+            <div class="card-group d-flex flex-row col-12">
+                <div class="card col-6 border-bottom-1 border-top-0 border-end-0 border-start-0 pe-3">
+                    <img src="./images/14-inch.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <small class="text-secondary pb-2">space gray</small>
+                        <p class="card-title pb-2 h4 ">8-Core CPU
+                            14-Core GPU
+                            16GB Unified Memory
+                            512GB SSD Storage¹</p>
+                        <small class="text-seconday">16-core Neural Engine
+                            14-inch Liquid Retina XDR display
+                            Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port
+                            Magic Keyboard with Touch ID
+                            Force Touch trackpad
+                            67W USB-C Power Adapt</small>
+                        <h4>$1,999.00</h4>
+                        <small class="text-secondary">or</small>
+                        <p class="h5 fw-bold pb-3">$108.25/mo.per month for 12 mo.monthsFootnote*</p>
+                        <p class="h5">Apple Trade In</p>
+                        <small class="text-secondary pb-5">Get credit toward a new Mac when you trade in your eligible
+                            computer. Or recycle it for free.Footnote◊◊</small>
+                        <a href="./selectMac 14.html" class="btn btn-primary rounded-3 col-12 ">Select</a>
+                    </div>
+                </div>
+                <div class="card col-6 border-bottom-1 border-top-0 border-end-0 border-start-0 pe-3">
+                    <img src="./images/14 -inch - 2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <small class="text-secondary pb-2 ">space gray</small>
+                        <p class="card-title pb-2 h4 ">10-Core CPU
+                            16-Core GPU
+                            16GB Unified Memory
+                            1TB SSD Storage¹</p>
+                        <small class="text-seconday ">16-core Neural Engine
+                            14-inch Liquid Retina XDR display
+                            Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port
+                            Magic Keyboard with Touch ID
+                            Force Touch trackpad
+                            67W USB-C Power Adapt</small>
+                        <h4>$2,499.00</h4>
+                        <small class="text-secondary">or</small>
+                        <p class="h5 fw-bold pb-3">$124.91/mo.per month for 12 mo.monthsFootnote*</p>
+                        <p class="h5">Apple Trade In</p>
+                        <small class="text-secondary pb-5">Get credit toward a new Mac when you trade in your eligible
+                            computer. Or recycle it for free.Footnote◊◊</small>
+                        <a href="./selectMac 14.html" class="btn btn-primary rounded-3 col-12 ">Select</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="inch16" class="row groupCard d-none">
+            <div class="card-group d-flex flex-row col-12">
+                <div class="card col-4 border-bottom-1 border-top-0 border-end-0 border-start-0 pe-3">
+                    <img src="./images/6.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <small class="text-dange pb-2">New</small>
+                        <p class="card-title pb-2 h4 ">10-Core CPU
+                            16-Core GPU
+                            16GB Unified Memory
+                            512GB SSD Storage¹</p>
+                        <small class="text-seconday">16-core Neural Engine
+                            14-inch Liquid Retina XDR display
+                            Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port
+                            Magic Keyboard with Touch ID
+                            Force Touch trackpad
+                            67W USB-C Power Adapt</small>
+                        <h4>$2,499.00</h4>
+                        <small class="text-secondary">or</small>
+                        <p class="h5 fw-bold pb-3">$108.25/mo.per month for 12 mo.monthsFootnote*</p>
+                        <p class="h5">Apple Trade In</p>
+                        <small class="text-secondary pb-5">Get credit toward a new Mac when you trade in your eligible
+                            computer. Or recycle it for free.Footnote◊◊</small>
+                        <a href="./selectMac 16.html" class="btn btn-primary rounded-3 col-12 ">Select</a>
+                    </div>
+                </div>
+                <div class="card col-4 border-bottom-1 border-top-0 border-end-0 border-start-0 pe-3">
+                    <img src="./images/6.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <small class="text-danger pb-2 ">New</small>
+                        <p class="card-title pb-2 h4">10-Core CPU
+                            16-Core GPU
+                            16GB Unified Memory
+                            1TB SSD Storage¹</p>
+                        <small class="text-seconday">16-core Neural Engine
+                            14-inch Liquid Retina XDR display
+                            Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port
+                            Magic Keyboard with Touch ID
+                            Force Touch trackpad
+                            67W USB-C Power Adapt</small>
+                        <h4>$2,699.00</h4>
+                        <small class="text-secondary">or</small>
+                        <p class="h5 fw-bold pb-3">$124.91/mo.per month for 12 mo.monthsFootnote*</p>
+                        <p class="h5">Apple Trade In</p>
+                        <small class="text-secondary pb-5">Get credit toward a new Mac when you trade in your eligible
+                            computer. Or recycle it for free.Footnote◊◊</small>
+                        <a href="./selectMac 16.html" class="btn btn-primary rounded-3 col-12 ">Select</a>
+                    </div>
+                </div>
+                <div class="card col-4 border-bottom-1 border-top-0 border-end-0 border-start-0 pe-3">
+                    <img src="./images/6.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <small class="text-danger pb-2">New</small>
+                        <p class="card-title pb-2 h4">10-Core CPU
+                            32-Core GPU
+                            32GB Unified Memory
+                            1TB SSD Storage¹</p>
+                        <small class="text-seconday">16-core Neural Engine
+                            14-inch Liquid Retina XDR display
+                            Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port
+                            Magic Keyboard with Touch ID
+                            Force Touch trackpad
+                            67W USB-C Power Adapt</small>
+                        <h4>$3,499.00</h4>
+                        <small class="text-secondary">or</small>
+                        <p class="h5 fw-bold pb-3">$124.91/mo.per month for 12 mo.monthsFootnote*</p>
+                        <p class="h5">Apple Trade In</p>
+                        <small class="text-secondary pb-5">Get credit toward a new Mac when you trade in your eligible
+                            computer. Or recycle it for free.Footnote◊◊</small>
+                        <a href="./selectMac 16.html" class="btn btn-primary rounded-3 col-12 ">Select</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex flex-column Box">
+            <p class="text-center">What’s in the Box</p>
+            <div class="card-group d-flex flex-row col-12">
+                <div class="card col-4 pe-3">
+                    <img src="./images/inch.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <small class="text-secondary fs-6 ">13-inch MacBook Pro</small>
+                    </div>
+                </div>
+                <div class="card col-4  pe-3">
+                    <img src="./images/usb.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <small class="text-secondary  fs-6 ">USB-C Charge Cable</small>
+                    </div>
+                </div>
+                <div class="card col-4 pe-3">
+                    <img src="./images/adapter.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <small class="text-secondary fs-6">61W Power Adapter</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="row d-flex flex-column bg-light compare">
+        <p class="text-center fw-bold">Compare Mac models</p>
+        <a class="text-decoration-none text-center fs-5" href="">find the best Mac for yoy ></a>
+        <img src="./images/compare.jpg" class="img-fluid" alt="">
+
+    </div>
+        <div class="row d-flex flex-row p-5">
+            <div class="col-6 border-0 card text-white bg-dark d-flex text-center ">
+                <div class="card-img-overlay appelTV">
+                    <p class="card-title fw-bold h5"><i class="fab fa-apple pe-5"></i>Get 3 months of Apple TV+ free when you buy a Mac.</p>
+                    <p class="card-text"><a href="#" class="text-decoration-none text-white">Learn more<i
+                                class="bi bi-arrow-right-square text-white ps-2"></i></a></p>
+                </div>
+            </div>
+            <div class="col-6 card text-white d-flex text-center border-0">
+                <img src="./images/10.jpg" style="height: auto;" class="card-img col-12" alt="...">
+                <div class="card-img-overlay">
+                    <p class="card-title fw-bold h2">TOM HANKS is </p>
+                    <p class="card-title fw-bold h2 font-monospace">F  I  N  C  H</p>
+                
+                </div>
+            </div>
+        </div>
+        <!-- <nav aria-label="Page navigation ">
+            <ul class="pagination justify-content-center">
+              <li onclick="prev()"  class="page-item">
+                <a id="prev"  class="page-link" href="./index.html" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="./appelLogo.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="./macBook 13-Inch.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="./Iphone 11.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="./macBook 14-Inch.html">4</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav> -->
+        <div id="footer" class="row bg-dark">
+            <div class="d-flex justify-content-center px-5  py-2">
+                <small class="text-secondary col-3">Copyright <i class="far fa-copyright text-secondary"></i> 2022 Appel
+                    Inc. All rights reversed.</small>
+                <a class="text-secondary text-decoration-none col-1" href="#">Privacy</a>
+                <small class="col-1 text-secondary">|</small>
+                <a class="text-secondary text-decoration-none col-1" href="#">Copy right</a>
+                <small class="col-1 text-secondary">|</small>
+                <a class="text-secondary text-decoration-none col-1" href="#">Terms of Use</a>
+                <small class="col-1 text-secondary">|</small>
+                <a class="text-secondary text-decoration-none col-1" href="#">Site Map</a>
+                <small class="col-1 text-secondary">|</small>
+                <a class="text-secondary text-decoration-none col-1" href="#">Legal</a>
+            </div>
+        </div>
+    </div>
+    <script src="./js/buy.js"></script>
+</body>
+
+</html>

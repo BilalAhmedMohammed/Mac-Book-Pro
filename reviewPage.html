@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Book Inch 13</title>
+    <link rel="stylesheet" href="styles/review.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/60e5baead1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body onload="bagFill()">
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-dark ">
+        <div class="container-fluid d-flex flex-column justify-items-center">
+            <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul id="navLinks" class="navbar-nav me-auto mb-2 mb-lg-0 text-danger">
+                    <li class="nav-item pe-4">
+                        <a class="nav-link text-secondary " aria-current="page" href="./appelLogo.html"><i class="bi bi-apple"></i></a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link text-secondary" href="#">Store</a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Mac</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">IPad</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Iphone</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Watch</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">AirPods</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">TV&Home</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Only on Apple</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Accessories</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Support</a>
+                    </li>
+                    <li id="searchButton" onclick="displaySearchInput()" class="nav-item pe-3">
+                        <a class="nav-link text-secondary" aria-current="page" href="#"><i class="bi bi-search"></i></a>
+                    </li>
+                    <li class="nav-item dropdown pe-3">
+                        <a class="nav-link ps-3 position-relative" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-bag text-secondary"></i>
+                            <span id="numOfElems"
+                                class="position-absolute badge top-10 start-100 translate-middle p-1 bg-secondary border border-light rounded-circle d-none">
+                                0
+                                <!-- <span class="visually-hidden">New alerts</span> -->
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu rounded-3 p-4 " aria-labelledby="navbarDropdown">
+                            <li><a id="bagBody" class="dropdown-item p-4 text-secondary" href="#">Your Bag is Empty</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i class="bi bi-bag pe-3"></i>Bag <small
+                                        id="bagCount"></small></a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-bookmark-check pe-3"></i>Saved Items</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-box-seam pe-3"></i>Orders</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-dash-circle-dotted pe-3"></i>Account</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-person-circle pe-3"></i>Sign in</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form id="FormSearch" class="d-none pe-3">
+                    <input onchange="test(this)" id="inputSearch" class="form-control me-2 bg-dark text-white "
+                        type="search" list="datalist" onkeyup="autoComplete(this.value)" placeholder="Search"
+                        aria-label="Search">
+                    <button id="closeBtnSearch" type="button" class="btn-close bg-secondary" onclick="resetNavLinks()"
+                        aria-label="Close"></button>
+                    <datalist  id="datalist">
+                        <option value="Iphon 11 pro"></option>
+                        <option value="Iphon 12 pro max"></option>
+                        <option value="Iphon x max pro"></option>
+                        <option value="Iphon 13 pro"></option>
+                        <option value="Ipad 5"></option>
+                        <option value="Ipad 6"></option>
+                        <option value="Ipad 7"></option>
+                        <option value="Ipad 8"></option>
+                        <option value="Mac pro"></option>
+                        <option value="Mac 2"></option>
+                        <option value="Mac 3"></option>
+                        <option value="Mac 6"></option>
+                        <option value="Watch 4"></option>
+                        <option value="Watch 2"></option>
+                        <option value="Watch 8"></option>
+                        <option value="Inch 13"></option>
+                        <option value="Inch 14"></option>
+                        <option value="Inch 16"></option>
+                    </datalist>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row bg-light Mac-Book-Pro py-3 text-center border border-top-1 border-bottom-0">
+            <small>Save 5% on Apple products with a new Apple Card through January 31. Only at Apple. Exclusions and
+                terms apply.‡</small>
+        </div>
+        <div class="row d-flex flex-column reviewText">
+            <p class="h1 fw-bold">Review your bag.</p>
+            <p class="text-secondary fs-5">Free delivery and free returns.</p>
+        </div>
+        <div class="row reviewText ">
+            <small class="bg-light p-3">Pay $166.58/mo.per month at 0% APR for eligible items in your order with Apple
+                Card Monthly Installments.◊ <a href="#" class="text-decoration-none">learn more </a></small>
+        </div>
+
+        <div class="row reviewText">
+            <img src="./images/apple-macbook-pro-14-inch-2021.jpg" class="img-fluid col-3" alt="">
+            <div class="col-5 d-flex flex-column">
+                <p class="h3 fw-bold">13-inch MacBook Pro - Space Gray</p>
+                <small class="text-secondary py-3">Pay 0% APR for 12 months:</small>
+            </div>
+            <div class="dropdown col-1">
+                <button class="btn btn-white dropdown-toggle text-primary fs-4" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    1
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item text-primary" href="#">2</a></li>
+                    <li><a class="dropdown-item text-primary" href="#">3</a></li>
+                    <li><a class="dropdown-item text-primary" href="#">4</a></li>
+                    <li><a class="dropdown-item text-primary" href="#">5</a></li>
+                    <li><a class="dropdown-item text-primary" href="#">6</a></li>
+                </ul>
+            </div>
+            <div class="d-flex flex-column col-3 align-items-end">
+                <p class="h3 fw-bold">$1,999.00</p>
+                <small class="text-secondary py-4">$166.58/mo.</small>
+                <a href="" onclick="remove(event)" id="remove" class="text-decoration-none fs-5">Remove</a>
+            </div>
+        </div>
+        <div class="row reviewText d-flex flex-column">
+            <p class="fw-bold h3 text-center col-12">All the essentials. And then some.</p>
+            <div id="reviewThings" class="col-12 d-flex flex-row">
+                <img src="./images/appelCare.jpg" class="img-fluid col-4"  alt="">
+                <img src="./images/usbBuy.jpeg" class="img-fluid ps-5 col-4"  alt="">
+                <img src="./images/usb.jpeg" class="img-fluid col-4"  alt="">
+            </div>
+        </div>
+        <div id="footer" class="row bg-dark px-5 d-flex flex-row flex-nowrap py-2 justify-content-center fixed-bottom">
+            <small class="text-secondary col-3">Copyright <i class="far fa-copyright text-secondary"></i> 2022 Appel
+                Inc. All rights reversed.</small>
+            <a class="text-secondary text-decoration-none col-1" href="#">Privacy</a>
+            <small class="col-1 text-secondary">|</small>
+            <a class="text-secondary text-decoration-none col-1" href="#">Copy right</a>
+            <small class="col-1 text-secondary">|</small>
+            <a class="text-secondary text-decoration-none col-1" href="#">Terms of Use</a>
+            <small class="col-1 text-secondary">|</small>
+            <a class="text-secondary text-decoration-none col-1" href="#">Site Map</a>
+            <small class="col-1 text-secondary">|</small>
+            <a class="text-secondary text-decoration-none col-1" href="#">Legal</a>
+        </div>
+    </div>
+    <script src="./js/review.js"></script>
+</body>
+
+</html>

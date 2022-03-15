@@ -1,0 +1,45 @@
+nav div #navbarSupportedContent ul li a:hover {
+  color: white !important;
+}
+
+nav div #navbarSupportedContent ul ul li a:hover {
+  background-color: black;
+  text-decoration: underline;
+}
+
+#inputSearch {
+  width: 43.75vw !important;
+}
+
+.Mac-Book-Pro {
+  padding: 0vw 19.375vw;
+}
+
+#footer {
+  padding: 0.625vw 19.375vw !important;
+}
+
+#footer div small, #footer div a, #footer div button {
+  font-size: 1.25vw !important;
+}
+
+.center {
+  padding: 5.28402vh 20.625vw 9.375vw 20.625vw;
+}
+
+.center img {
+  height: 52.84016vh;
+}
+
+.center div button {
+  font-size: 1.875vw !important;
+}
+
+.center .leftSide {
+  height: 20%;
+}
+
+#btnColse {
+  margin-left: 50vw;
+}
+/*# sourceMappingURL=select.css.map */

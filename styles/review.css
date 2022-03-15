@@ -1,0 +1,30 @@
+nav div #navbarSupportedContent ul li a:hover {
+  color: white !important;
+}
+
+nav div #navbarSupportedContent ul ul li a:hover {
+  background-color: black;
+  text-decoration: underline;
+}
+
+#inputSearch {
+  width: 43.75vw !important;
+}
+
+.reviewText {
+  padding: 2.64201vh 21.875vw 0vw 21.875vw;
+}
+
+#remove:hover {
+  text-decoration: underline !important;
+}
+
+#reviewThings img {
+  height: 21.13606vh;
+}
+
+#footer small,
+#footer a {
+  font-size: 1vw;
+}
+/*# sourceMappingURL=review.css.map */

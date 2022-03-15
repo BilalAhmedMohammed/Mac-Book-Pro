@@ -1,0 +1,66 @@
+$primaryColor: #0d6efd;
+@function fromPXtoVM($width){
+    @return ($width/16)+vw;
+}
+@function fromPXtoVH($height){
+    @return ($height/7.57)+vh;
+}
+nav {
+    div {
+        #navbarSupportedContent {
+            ul {
+                li {
+                    a {
+                        &:hover {
+                            color: white !important;
+                        }
+                    }
+                }
+                ul {
+                    li {
+                        a {
+                            &:hover {
+                                background-color: black;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#inputSearch{
+    width: fromPXtoVM(700) !important;
+}
+#divTextMac {
+    padding: 2.375vw;
+    #textMackBook {
+        font-size: 6.25vw;
+    }
+}
+.cardImg {
+    padding: 0vw 14.375vw 0vw 14.375vw;
+}
+#cardLeft {
+    padding-top: 2vw;
+}
+.groupCard{
+ padding: fromPXtoVM(230) fromPXtoVM(230) 0vw fromPXtoVM(230) ;   
+}
+#rightMac{
+    font-size: fromPXtoVM(55);
+    padding-bottom: fromPXtoVH(70);
+}
+.differenceComponents
+{
+ padding: fromPXtoVM(50) fromPXtoVM(230) fromPXtoVM(50) fromPXtoVM(230) ;
+}
+.delivery{
+    padding:fromPXtoVM(90) fromPXtoVM(230);
+}
+#footer{
+    a,small{
+        font-size: fromPXtoVM(14);
+    }
+}

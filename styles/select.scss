@@ -1,0 +1,63 @@
+$primaryColor: #0d6efd;
+@function fromPXtoVM($width){
+    @return ($width/16)+vw;
+}
+@function fromPXtoVH($height){
+    @return ($height/7.57)+vh;
+}
+nav {
+    div {
+        #navbarSupportedContent {
+            ul {
+                li {
+                    a {
+                        &:hover {
+                            color: white !important;
+                        }
+                    }
+                }
+                ul {
+                    li {
+                        a {
+                            &:hover {
+                                background-color: black;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#inputSearch{
+    width: fromPXtoVM(700) !important;
+}
+.Mac-Book-Pro{
+    padding: 0vw fromPXtoVM(310);
+}
+#footer{
+    padding: fromPXtoVM(10) fromPXtoVM(310) !important;
+    div{
+        small,a,button{
+            font-size: fromPXtoVM(20) !important;
+        }
+    }
+}
+.center{
+    padding: fromPXtoVH(40) fromPXtoVM(330) fromPXtoVM(150) fromPXtoVM(330);
+    img{
+        height: fromPXtoVH(400);
+    }
+    div{
+        button{
+            font-size: fromPXtoVM(30) !important;
+        }
+    }
+    .leftSide{
+        height: 20%;
+    }
+}
+#btnColse{
+    margin-left: fromPXtoVM(800);
+}

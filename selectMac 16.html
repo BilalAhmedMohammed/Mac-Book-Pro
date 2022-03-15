@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Book Inch 13</title>
+    <link rel="stylesheet" href="styles/select.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/60e5baead1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-dark ">
+        <div class="container-fluid d-flex flex-column justify-items-center">
+            <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul id="navLinks" class="navbar-nav me-auto mb-2 mb-lg-0 text-danger">
+                    <li class="nav-item pe-4">
+                        <a class="nav-link text-secondary " aria-current="page" href="./appelLogo.html"><i
+                                class="bi bi-apple"></i></a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link text-secondary" href="#">Store</a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Mac</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">IPad</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Iphone</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Watch</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">AirPods</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">TV&Home</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Only on Apple</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Accessories</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link text-secondary" aria-current="page" href="#">Support</a>
+                    </li>
+                    <li id="searchButton" onclick="displaySearchInput()" class="nav-item pe-3">
+                        <a class="nav-link text-secondary" aria-current="page" href="#"><i class="bi bi-search"></i></a>
+                    </li>
+                    <li class="nav-item dropdown pe-3">
+                        <a class="nav-link ps-3 position-relative" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-bag text-secondary"></i>
+                            <span id="numOfElems"
+                                class="position-absolute badge top-10 start-100 translate-middle p-1 bg-secondary border border-light rounded-circle d-none">
+                                0
+                                <!-- <span class="visually-hidden">New alerts</span> -->
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu rounded-3 p-4 " aria-labelledby="navbarDropdown">
+                            <li><a id="bagBody" class="dropdown-item p-4 text-secondary" href="#">Your Bag is Empty</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i class="bi bi-bag pe-3"></i>Bag <small
+                                        id="bagCount"></small></a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-bookmark-check pe-3"></i>Saved Items <small id="savedItems"
+                                        class="text-primary"></small></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-box-seam pe-3"></i>Orders</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-dash-circle-dotted pe-3"></i>Account</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-primary" href="#"><i
+                                        class="bi bi-person-circle pe-3"></i>Sign in</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form id="FormSearch" class="d-none pe-3">
+                    <input onchange="test(this)" id="inputSearch" class="form-control me-2 bg-dark text-white "
+                        type="search" list="datalist" onkeyup="autoComplete(this.value)" placeholder="Search"
+                        aria-label="Search">
+                    <button id="closeBtnSearch" type="button" class="btn-close bg-secondary" onclick="resetNavLinks()"
+                        aria-label="Close"></button>
+                    <datalist  id="datalist">
+                        <option value="Iphon 11 pro"></option>
+                        <option value="Iphon 12 pro max"></option>
+                        <option value="Iphon x max pro"></option>
+                        <option value="Iphon 13 pro"></option>
+                        <option value="Ipad 5"></option>
+                        <option value="Ipad 6"></option>
+                        <option value="Ipad 7"></option>
+                        <option value="Ipad 8"></option>
+                        <option value="Mac pro"></option>
+                        <option value="Mac 2"></option>
+                        <option value="Mac 3"></option>
+                        <option value="Mac 6"></option>
+                        <option value="Watch 4"></option>
+                        <option value="Watch 2"></option>
+                        <option value="Watch 8"></option>
+                        <option value="Inch 13"></option>
+                        <option value="Inch 14"></option>
+                        <option value="Inch 16"></option>
+                    </datalist>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide d-none" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="bg-dark"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="bg-dark"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="bg-dark"
+                aria-label="Slide 4"></button>
+        </div>
+        <button id="btnColse" type="button" onclick="closeGallery(event)" class="btn-close btn-close-dark bg-secondary"
+            aria-label="Close"></button>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/18.jpg" class="d-block w-100" style="height: 96vh;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/6.jpeg" class="d-block w-100" style="height: 96vh;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/3.jpg" class="d-block w-100" style="height: 96vh;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/20.jpg" class="d-block w-100" style="height: 96vh;" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div id="container" class="container-fluid">
+        <div class="row flex-row justifycontent-between Mac-Book-Pro py-2">
+            <div class="col-5 col-lg-4">
+                <p class="h4">MacBook Pro</p>
+            </div>
+            <div class="col-7 col-lg-8 d-flex flex-row justify-content-end">
+                <a class="text-decoration-none text-secondary pe-4 fs-6" href="#">Overview</a>
+                <a class="text-decoration-none text-secondary pe-4 fs-6" href="#">macOS</a>
+                <a class="text-decoration-none text-secondary pe-3 fs-6" href="#">Compare</a>
+
+            </div>
+        </div>
+        <div class="row bg-light Mac-Book-Pro py-3 text-center border border-top-1 border-bottom-0 ">
+            <small>Save 5% on Apple products with a new Apple Card through January 31. Only at Apple. Exclusions and
+                terms apply.<a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    href="">learn more ></a></small>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-apple"></i> Card</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="h1 fw-bold text-center">Get a new Apple Card and save even more on Apple
+                                products.‡</p>
+                            <p class="text-secondary">Only at Apple. Shop in stores, online, or on the Apple Store
+                                appand get Daily Cash back.</p>
+                            <p class="h4">Get 5% Daily Cash back when you pay in full.</p>
+                            <p class="text-secondary">Save even more on iPhone, iPad, Apple Watch, Mac, and more. Apply
+                                today and save on purchases of Apple products through January 31. Purchases made with
+                                Apple Card Monthly Installments are excluded. Additional exclusions and terms apply.‡
+                            </p>
+                            <p class="h4">Or get 3% Daily Cash back when you pay over time.</p>
+                            <p class="text-secondary">Get 3% Daily Cash back when you use Apple Card and select a
+                                payment plan like Apple Card Monthly Installments during checkout.</p>
+                            <p class="text-secondary">‡ The following purchases with Apple Card are ineligible to earn
+                                5% back: monthly financing through Apple Card Monthly Installments, Apple iPhone
+                                Payments, the iPhone Upgrade Program, and wireless carrier financing plans; Apple Media
+                                Services; AppleCare+ monthly payments. Subject to credit approval. Valid only on
+                                qualifying purchases in U.S. for new Apple Card customers who open an account and use it
+                                from 12/26/21 to 1/31/22 at Apple Store locations, apple.com, the Apple Store App, or by
+                                calling 1-800-MY-APPLE. Accounts opened before 12/26/21 or after 1/31/22 do not qualify.
+                                New Apple Card users added to an Apple Card Family account opened during offer period
+                                can earn 5% back on their own purchases. Not valid for existing Apple Card users who
+                                merge their Apple Card accounts to become Co-Owners. 5% is total amount of Daily Cash
+                                that can be earned for qualifying Apple purchases using Apple Card. Returning qualified
+                                items that were purchased during offer period may impact your cash back. 5% savings is
+                                earned as Daily Cash and transferred to your Apple Cash card when transactions post to
+                                your Apple Card account. If you do not have an Apple Cash card, Daily Cash can be
+                                applied by you as a credit on your statement balance. See the Apple Card Customer
+                                Agreement for more details on Daily Cash and qualifying transactions. Changes to your
+                                account status during offer period may delay the fulfillment of your Daily Cash bonus.
+
+                                To access and use all the features of Apple Card, you must add Apple Card to Wallet on
+                                an iPhone or iPad with the latest version of iOS or iPadOS. Update to the latest version
+                                by going to Settings > General > Software Update. Tap Download and Install.
+
+                                Available for qualifying applicants in the United States.
+
+                                Apple Card is issued by Goldman Sachs Bank USA, Salt Lake City Branch.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row center">
+            <div class="col-5 d-flex flex-column sticky-top leftSide">
+                <img src="./images/9.jpg" class="img-fluid" alt="">
+                <a href="#" onclick="gallery(event)" class="text-decoration-none text-center pt-2">View gallery</a>
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="d-flex flex-column col-6">
+                        <i class="bi bi-box-seam text-secondary pe-1 fs-5 text-center"></i>
+                        <small class="text-center">Get free delivery, or pick up available items at an Apple
+                            Store</small>
+                    </div>
+                    <div class="d-flex flex-column col-6">
+                        <i class="bi bi-box-seam text-secondary pe-1 fs-5 text-center"></i>
+                        <small class="text-center">Free and easy returns</small>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column col-7">
+                <small class="text-danger">New ++</small>
+                <p class="h2 fw-bold">Customize your 16‑inch MacBook Pro - Space Gray</p>
+                <small class="text-secondary pb-2">Apple M1 chip with 8‑core CPU, 8‑core GPU, and 16‑core Neural
+                    Engine</small>
+                <small class="text-secondary pb-2">8GB unified memory</small>
+                <small class="text-secondary pb-2">256GB SSD storage</small>
+                <small class="text-secondary pb-2">13-inch Retina display with True Tone</small>
+                <small class="text-secondary pb-2">Backlit Magic Keyboard - US English</small>
+                <small class="text-secondary pb-2">Touch Bar and Touch ID</small>
+                <small class="text-secondary pb-2">Two Thunderbolt / USB 4 ports</small>
+                <a class="text-decoration-none pb-4" href="#">Learn more about the Appel M1 chip ></a>
+                <hr>
+                <small class="fw-bold pt-3">Apple Trade In</small>
+                <small class="text-secondary pb-2">Get credit toward a new Mac when you trade in your eligible computer.
+                    Or recycle it for free.</small>
+                <a class="text-decoration-none pb-4" href="#">Get started</a>
+                <hr>
+                <small class="fw-bold pt-3">Memory</small>
+                <a class="text-decoration-none pb-4" href="#">How much memory is right for you?</a>
+                <button class="p-3 fs-3 bg-white text-start">8GB unified memory</button>
+                <button class="p-3 fs-3 bg-white text-start">16GB unified memory<small
+                        class="float-end text-secondary">+$200.00</small></button>
+                <small class="fw-bold pt-3">Strorage</small>
+                <a class="text-decoration-none pb-4" href="#">How much storage is right for you?</a>
+                <button class="p-3 fs-3 bg-white text-start">256GB SSD storage</button>
+                <button class="p-3 fs-3 bg-white text-start">512GB SSD storage <small
+                        class="float-end text-secondary">+$200.00</small></button>
+                <button class="p-3 fs-3 bg-white text-start">1TB SSD storage <small
+                        class="float-end text-secondary">+$400.00</small></button>
+                <button class="p-3 fs-3 bg-white text-start">2TB SSD storage <small
+                        class="float-end text-secondary">+$800.00</small></button>
+                <p class="h5 fw-bold pt-3">Keyboard Language</p>
+                <a class="text-decoration-none pb-4" href="#">Learn more</a>
+                <div class="form-floating">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <option selected>Arabic Egypt - Al soiduya</option>
+                        <option value="1">Turkesh</option>
+                        <option value="2">French</option>
+                        <option value="3">English</option>
+                    </select>
+                    <label for="floatingSelect">Keyboard Language</label>
+                </div>
+                <p class="h4 fw-bold pt-2">Pre-Installed Software</p>
+                <p class="h5 fw-bold pt-3">Final Cut Pro</p>
+                <a class="text-decoration-none pb-4" href="#">Learn more</a>
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <button type="button" class="btn py-3 btn-outline-secondary">None</button>
+                    <button type="button" class="btn py-3 btn-outline-secondary">Final </button>
+                </div>
+                <p class="h5 fw-bold pt-3">Logic Pro</p>
+                <a class="text-decoration-none pb-4" href="#">Learn more</a>
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <button type="button" class="btn py-3 btn-outline-secondary">None</button>
+                    <button type="button" class="btn py-3 btn-outline-secondary">Final </button>
+                </div>
+            </div>
+        </div>
+        <div id="footer"
+            class="row bg-light d-flex flex-row border border-top-1 border-bottom-0 justify-content-evenly fixed-bottom">
+            <div class="d-flex flex-column text-danger col-3">
+                <small class="fw-bold text-dark"><i
+                        class="bi bi-box-seam text-secondary col-1 pe-1 fs-5"></i>Ships</small>
+                <small class="ps-4 text-secondary">1–3 business days</small>
+                <small class="ps-4 text-secondary">Free Shipping</small>
+                <a class="ps-4 text-decoration-none" href="#">Get delivery dates</a>
+            </div>
+            <div class="d-flex flex-column text-secondary col-3">
+                <small class="fw-bold text-dark"><i class="bi bi-bag text-secondary col-1 pe-1 fs-5"></i>PickUp</small>
+                <a class="ps-4 text-decoration-none" href="#">Get delivery dates</a>
+            </div>
+            <div class="d-flex flex-column text-secondary col-3">
+                <small class="fw-bold text-dark ps-5">$1,299.00 or</small>
+                <small class="fw-bold text-dark">$108.25/mo.per month</small>
+            </div>
+            <div class="d-flex flex-column text-secondary col-2">
+                <button id="btnAdd" type="button" class="btn btn-primary">Add to Bag</button>
+            </div>
+            <i onclick="saveItem(this)" class="bi bi-bookmark col-1 fs-3 text-primary"></i>
+        </div>
+    </div>
+    <script src="./js/selectElement 16.js"></script>
+</body>
+
+</html>

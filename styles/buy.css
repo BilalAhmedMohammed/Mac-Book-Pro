@@ -1,0 +1,44 @@
+nav div #navbarSupportedContent ul li a:hover {
+  color: white !important;
+}
+
+nav div #navbarSupportedContent ul ul li a:hover {
+  background-color: black;
+  text-decoration: underline;
+}
+
+#inputSearch {
+  width: 43.75vw !important;
+}
+
+.Mac-Book-Pro {
+  padding: 0vw 19.375vw;
+}
+
+.textChoose {
+  padding: 2.5vw 29.375vw 2.5vw 29.375vw;
+  font-size: 2.5vw;
+}
+
+.btnInches {
+  padding: 2.64201vh 36.25vw 2.64201vh 36.25vw;
+}
+
+.groupCard {
+  padding: 0vw 17.5vw 2.5vw 17.5vw;
+}
+
+.Box {
+  padding: 2.5vw 12.5vw 2.5vw 12.5vw;
+  font-size: 2.5vw;
+}
+
+.compare {
+  padding: 3.125vw 12.5vw;
+  font-size: 2.1875vw;
+}
+
+#footer small, #footer a {
+  font-size: 1vw;
+}
+/*# sourceMappingURL=buy.css.map */

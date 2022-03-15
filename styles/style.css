@@ -1,0 +1,50 @@
+nav div #navbarSupportedContent ul li a:hover {
+  color: white !important;
+}
+
+nav div #navbarSupportedContent ul ul li a:hover {
+  background-color: black;
+  text-decoration: underline;
+}
+
+#inputSearch {
+  width: 43.75vw !important;
+}
+
+#divTextMac {
+  padding: 2.375vw;
+}
+
+#divTextMac #textMackBook {
+  font-size: 6.25vw;
+}
+
+.cardImg {
+  padding: 0vw 14.375vw 0vw 14.375vw;
+}
+
+#cardLeft {
+  padding-top: 2vw;
+}
+
+.groupCard {
+  padding: 14.375vw 14.375vw 0vw 14.375vw;
+}
+
+#rightMac {
+  font-size: 3.4375vw;
+  padding-bottom: 9.24703vh;
+}
+
+.differenceComponents {
+  padding: 3.125vw 14.375vw 3.125vw 14.375vw;
+}
+
+.delivery {
+  padding: 5.625vw 14.375vw;
+}
+
+#footer a, #footer small {
+  font-size: 0.875vw;
+}
+/*# sourceMappingURL=style.css.map */
